@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: "ServiceDiscovery"
+
+server:
+  port: 8761
+
+# https://cloud.spring.io/spring-cloud-netflix/reference/html/#spring-cloud-eureka-server-standalone-mode
+eureka:
+#  instance:
+#    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
