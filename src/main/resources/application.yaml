@@ -10,3 +10,21 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+
+#Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,env,beans"
+  info:
+    env:
+      enabled: "true"
+
+# /actuator/info
+info:
+  application:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+    applicationName: ${spring.application.name}
